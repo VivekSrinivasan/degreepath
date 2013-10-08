@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<div> </div>
+
+<script>
+
+var json =[
+  {
+    "department": "ME",
+    "number": "1770",
+    "name": "Intro to Engr Graphics",
+    "description": "Introduction to engineering graphics and visualization including sketching, line drawing, and solid modeling. Development and interpretation of drawings and specifications for product realization. Crosslisted with AE and CEE 1770.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "3.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "2016",
+    "name": "Computing Techniques",
+    "description": "An introduction to the use of computers and MATLAB programming for the solution of mechanical engineering problems. Topics include: sources of error in computing, the use of modular software design, basic numerical methods, and signal processing.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "2110",
+    "name": "Creative Decisions& Dsgn",
+    "description": "To learn fundamental techniques for creating, analyzing, synthesizing, and implementing design solutions to open- ended problems with flexibility, adaptability, and creativity through team and individual efforts.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "3.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "2202",
+    "name": "Dynamics of Rigid Bodies",
+    "description": "Kinematics and dynamics of particles and rigid bodies in one, two, and three dimensions.  Work-energy and impulse-momentum concepts.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "2698",
+    "name": "Research Assistantship",
+    "description": "Independent research conducted under the guidance of a faculty member.",
+    "creditHours": [
+      "1.00",
+      "12.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "12.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "2699",
+    "name": "Undergraduate Research",
+    "description": "Independent research conducted under the guidance of a faculty member.",
+    "creditHours": [
+      "1.00",
+      "12.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "12.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3017",
+    "name": "System Dynamics",
+    "description": "Dynamic modeling and simulation of systems with mechanical, hydraulic, thermal and/or electrical elements.  Frequency response analysis, stability, and feedback control design of dynamic systems.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3057",
+    "name": "Experimental Methodology",
+    "description": "Introduction to basic instrumentation and experimental methodology used in mechanical engineering, including calibration, use, precision and accuracy. Consideration errors, precision and accuracy in experimental measurements and technical reports.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "3.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3180",
+    "name": "Machine Design",
+    "description": "The selection, analysis, and synthesis of springs, joining and fastening methods, bearings, shafts, gears, and other elements.  Design of assemblies. Computer-based methods.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3210",
+    "name": "Design and Manufacture",
+    "description": "Major manufacturing processes, capabilities, and costs.  Interaction between design, materials and manufacturing process selection.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3322",
+    "name": "Thermodynamics",
+    "description": "Introduction to thermodynamics. Thermodynamic properties, energy and mass conservation, entropy and the second law. Second-law analysis of thermodynamic systems, gas cycles, vapor cycles.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3340",
+    "name": "Fluid Mechanics",
+    "description": "The fundamentals of fluid mechanics. Topics include fluid statics; control-volume analysis; the Navier-Stokes equations; similitude; viscous, inviscid and turbulent flows; boundary layers.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3345",
+    "name": "Heat Transfer",
+    "description": "Introduction to the study of heat transfer, transport coefficients, steady state conduction, transient conduction, radiative heat transfer, and forced and natural convection.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3720",
+    "name": "Intro-Fluid&Thermal Engr",
+    "description": "Theory and application, but no exhaustive treatment of fluid mechanics, thermodynamics, and heat transfer in analysis and design of fluid and thermal energy systems.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "3743",
+    "name": "Emerging Technologies",
+    "description": "Analysis of emerging technologies and their impacts for firm practice, market practice, policy, and society.  Credit not allowed for both ME 3743 and MGT 3743.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4011",
+    "name": "IC Engines",
+    "description": "Analysis and design of various types of engines used in transportation systems. Topics include advances in energy efficiency and emissions in automotive applicatons.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4041",
+    "name": "Computer Graphics & Cad",
+    "description": "Principles of geometric modeling, finite-element method, and interactive computer graphics hardware and software.  CAD and CAE applications in thermal and mechanical design problems. Design projects.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4056",
+    "name": "ME Systems Laboratory",
+    "description": "Measurement and analysis of mechanical, acoustic, manufacturing, thermodynamic, fluid, and heat transfer phenomena.  Emphasis on data acquisition, reduction, analysis, and report preparation.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "3.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4182",
+    "name": "Capstone Design",
+    "description": "Teams apply a systematic design process to real multidisciplinary problems. Problems selected from a broad spectrum of interest areas, including biomedical, ecological, environmental, mechanical, and thermal.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "1.00"
+    ],
+    "labHours": [
+      "0.00",
+      "6.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4189",
+    "name": "Structural Vibrations",
+    "description": "Single and multi-degree-of-freedom systems as well as continuous systems are analyzed for their vibrational response characteristics using both exact and approximate methods.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4193",
+    "name": "Tribological Design",
+    "description": "Analysis of tribological aspects of machine components, including friction, lubrication, and wear.  Group design project to optimize system tribological performance.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4315",
+    "name": "Energy Systems Analy&Dgn",
+    "description": "Integrated concepts, laws, and methodologies from thermal sciences are used to analyze, model, and design energy systems and to predict system performance for fixed designs.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4447",
+    "name": "Microproces Ctrl Mfg Sys",
+    "description": "Lectures address the fundamental aspects of manufacturing elements and microprocessors and their applications. Hands-on application of machine and machine tool control will be stressed.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "3.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4451",
+    "name": "Robotics",
+    "description": "Mathematical modeling, simulation, and control of robotic systems with mechanical and sensory elements.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "2.00"
+    ],
+    "labHours": [
+      "0.00",
+      "2.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4452",
+    "name": "Control Dynamic Systems",
+    "description": "Modeling and simulation of dynamic systems in frequency and time domains.  Feedback control analysis and design methods including root-locus, frequency response, and pole-placement.  Introduction to digital control systems.  Credit not allowed for both ME 4452 and ME 3015.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4698",
+    "name": "Research Assistantship",
+    "description": "Independent research conducted under the guidance of a faculty member.",
+    "creditHours": [
+      "1.00",
+      "12.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "12.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4699",
+    "name": "Undergraduate Research",
+    "description": "Independent research conducted under the guidance of a faculty member.",
+    "creditHours": [
+      "1.00",
+      "12.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "12.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4740",
+    "name": "Bio-Inspired Design",
+    "description": "We examine evolutionary adaptation as a source for engineering design inspiration, utilizing principles of scaling, adaptability, and robust multifunctionality that characterize biological systems.  Credit not allowed for both ME 4740 and (BIOL 4740, or ISYE 4740 or PTFE 4740 or MSE 4740).",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4741",
+    "name": "Int Mgt Dev-Proj Prep",
+    "description": "Individual and group-based experiential learning activities to develop integrated human system management skills that prepare students for more successful capstone collaboration and learning. Credit not allowed for both ME 4741 and CS 4741 or MGT 4741.",
+    "creditHours": [
+      "0.00",
+      "3.00"
+    ],
+    "lectureHours": [
+      "0.00",
+      "1.00"
+    ],
+    "labHours": [
+      "0.00",
+      "6.00"
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4753",
+    "name": "Topics in Engr Practice",
+    "description": "Topics of current inportance offered in collaboration with an approved partner of Georgia Tech's Distance Learning Program",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4757",
+    "name": "Biofluid Mechanics",
+    "description": "Introduction to the study of blood flow in the cardiovascular system.  Emphasis on modeling and the potential of flow studies for clinical research application. Crosslisted with AE and CHE 4757.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4758",
+    "name": "Biosolid Mechanics",
+    "description": "The mechanics of living tissue, e.g., arteries, skin, heart muscle, ligament, tendon, cartilage, and bone.  Constitutive equations and some simple mechanical models. Mechanics of cells. Applications. Crosslisted with AE and CHE 4758.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4760",
+    "name": "Acoustics& Noise Control",
+    "description": "Study of acoustics related to noise and its control; acoustic terminology, wave propagation, wave equation solutions, instrumentation, data processing, room acoustics, noise control, hearing, noise legislation. Crosslisted with AE 4760.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4763",
+    "name": "Pulping & Chem Recovery",
+    "description": "Pulping and chemical recovery processes are studied on the reaction, delignification, energy,  and liquor reuse.  The process optimization, air and water pollution minimization are taught. Crosslisted with CHE 4763.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4766",
+    "name": "Nanoscale Devices",
+    "description": "Fundamental properties at the nanoscale for photonics and sensors.  Nanoscale fabrication methods including thin films, ion beam, lithography, electroplating, and example case studies in NEMS/MEMS and photonics.  Credit not allowed for both ME 4766 and MSE 4766.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4775",
+    "name": "Polymer Science & Engr I",
+    "description": "An introduction to the chemistry, structure and formation of polymers, physical states and transitions, physical and mechanical properties of polymer fluids and solids. Crosslisted with CHEM, CHE, MSE, and PTFE 4775.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4781",
+    "name": "Biomed Instrumentation",
+    "description": "A study of medical instrumentation from a systems viewpoint. Pertinent physiological and electro-physiological concepts will be covered.  Credit not allowed for both ME 4781 and (CHE 4781 or CHBE 4781 or BMED 4781 or ECE 4781).",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4790",
+    "name": "Materials Select& Design",
+    "description": "Principles of selecting materials and processes for engineering applications.  Methodologies for designing new materials and conceiving hybrid solutions.  Credit not allowed for both ME 4790 and ME 4213 or ME 4790.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4791",
+    "name": "Mech Behavior-Composites",
+    "description": "Stress-strain behavior of composites, properties of matrix and reinforcing materials, mechanics of fiber-reinforced composites, lamina and laminate analysis, and mechanical performance. Crosslisted with AE, CEE, CHE, MSE, and PTFE 4791.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4803",
+    "name": "Special Topics-Mech Engr",
+    "description": "Special topic offerings of current interest not included in regular courses.",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4823",
+    "name": "Special Topics",
+    "description": "",
+    "creditHours": [
+      "3.00"
+    ],
+    "lectureHours": [
+      "3.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4901",
+    "name": "Special Problems",
+    "description": "Individual studies in certain specialized areas, and mathematical analyses and/or experimental investigations of problems of current interest in mechanical engineering.",
+    "creditHours": [
+      "1.00",
+      "21.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "21.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  },
+  {
+    "department": "ME",
+    "number": "4903",
+    "name": "Special Problems",
+    "description": "Individual studies in certain specialized areas, and mathematical analyses and/or experimental investigations of problems of current interest in mechanical engineering.",
+    "creditHours": [
+      "1.00",
+      "21.00"
+    ],
+    "lectureHours": [
+      "1.00",
+      "21.00"
+    ],
+    "labHours": [
+      ""
+    ],
+    "grade_basis": "",
+    "course_attributes": "<span class=\"fieldlabeltext\">Course Attributes: </span>",
+    "property": ""
+  }
+]
+
+//Java Script Code-----------------------------------
+
+var coursesTaken=[];
+$("div").append(coursesTaken+"</br>");
+
+//Button Listener
+function insertIntoList(num){
+	if(document.getElementById(num).style.background == "rgb(105, 105, 105)"){
+		document.getElementById(num).style.background="#FFFFFF";
+		delete coursesTaken[coursesTaken.indexOf(num)];
+	}
+	else{
+		document.getElementById(num).style.background="#696969";
+		coursesTaken.push(num);
+	}
+	
+};
+
+
+//Generate Buttons for classes
+$.each(json, function(i, field){
+	var div="ME " + field['number'] + "</br>"
+	var button="<button onclick=insertIntoList("+field['number']+") style='width:150px;height:100px' id="+field['number']+">"+div+"</button> ";
+  $("div").append(button);
+
+  document.getElementById(field['number']).style.background="#FFFFFF";
+});
+var filtered = [];
+
+function submitList(){
+
+  //Clearing Out Undefined item from Array
+  filtered = [];
+  $.each(coursesTaken, function(i,field){
+    if(coursesTaken[i]!=null){
+      filtered.push(coursesTaken[i]);
+    }
+  });
+
+  //Submitting Data of courses taken
+  $.ajax({
+  type: "POST",
+  url: "www.google.com", // Link to main view
+  data: JSON.stringify(filtered),
+  dataType: JSON
+  });
+
+}
+
+//Submit Button
+var submit="<button onclick=submitList()  id='submit'>Submit</button> ";
+  $("div").append(submit);
+
+ </script>
+</body>
+</html>
