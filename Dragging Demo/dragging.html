@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gridster test</title>
+		<meta name="author" content="vivek">
+		<link rel="stylesheet" type="text/css" href="assets/css/jquery.gridster.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	</head>
+	<body>
+		<section class="demo">
+			<div class="gridster">
+				<ul>
+					<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"><h1>ME 2110</h1></li>
+					<li data-row="2" data-col="1" data-sizex="1" data-sizey="1"><h1>ENGLISH 1101</h1></li>
+					<li data-row="3" data-col="1" data-sizex="1" data-sizey="1"><h1>MATH 1502</h1></li>
+
+					<li data-row="1" data-col="4" data-sizex="1" data-sizey="1"><h1>CS 1301</h1></li>
+					<li data-row="2" data-col="4" data-sizex="1" data-sizey="1"><h1>PSYCH 1101</h1></li>			
+				</ul>
+			</div>
+		</section>
+		<script type="text/javascript" src="assets/jquery.js"></script>
+		<script type="text/javascript" src="assets/jquery.gridster.js" charster="utf-8"></script>
+		<script type="text/javascript">
+			var gridster;
+
+			$(function() {
+				gridtster = $(".gridster > ul").gridster({
+					widget_margins: [10, 10], 
+					widget_base_dimensions: [140, 140],
+					min_cols: 6
+				}).data('gridster');
+			});
+		</script>
+	</body>
+</html>
